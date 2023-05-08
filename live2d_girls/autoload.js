@@ -34,8 +34,8 @@ function loadExternalResource(url, type) {
 	]).then(() => {
 		initWidget({
 			waifuPath: tips_path + "waifu-tips.json",
-			apiPath: "https://home.hyyyqz.top/live2d/",
-			//cdnPath: "https://你的对象存储域名/live2d/"
+			//apiPath: "https://home.hyyyqz.top/live2d/",
+			cdnPath: "https://home.hyyyqz.top/live2d/"
 		});
 	});
 console.log(`
