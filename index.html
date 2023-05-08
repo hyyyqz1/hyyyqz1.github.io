@@ -102,13 +102,14 @@ preloadImage.src = imageDir + imageList[imageIndex] + ".jpg";
 setTimeout(function() {
   var imageUrl = "url('" + imageDir + imageList[imageIndex] + ".jpg')";
   document.documentElement.style.backgroundImage = imageUrl;
+}, 2000);
+
+setTimeout(function() {
   var nextImageIndex = (imageIndex + 1) % imageList.length;
   var preloadNextImage = new Image();
   preloadNextImage.src = imageDir + imageList[nextImageIndex] + ".jpg";
+}, 20000);
 
-  // 重新定义下一张要使用的图片的 index
-  imageIndex = nextImageIndex;
-}, 2000);
 
 
 
