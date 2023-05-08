@@ -100,13 +100,16 @@ var preloadImage = new Image();
 preloadImage.src = imageDir + imageList[imageIndex] + ".jpg";
 
 setTimeout(function() {
-  var imageIndex = getRandomInt(imageList.length);
   var imageUrl = "url('" + imageDir + imageList[imageIndex] + ".jpg')";
   document.documentElement.style.backgroundImage = imageUrl;
   var nextImageIndex = (imageIndex + 1) % imageList.length;
   var preloadNextImage = new Image();
   preloadNextImage.src = imageDir + imageList[nextImageIndex] + ".jpg";
+
+  // 重新定义下一张要使用的图片的 index
+  imageIndex = nextImageIndex;
 }, 2000);
+
 
 
 window.addEventListener('load', function() {
