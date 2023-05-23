@@ -92,12 +92,11 @@ button:focus {
 
 .cardList {
   position: absolute;
-  bottom: 350px;
   width: calc(3 * var(--card-width));
   height: auto;
 }
 .cardList__btn {
-  --btn-size: 35px;
+  --btn-size: 50px;
   width: var(--btn-size);
   height: var(--btn-size);
   position: absolute;
@@ -184,8 +183,8 @@ button:focus {
 }
 
 .infoList {
-  position: absolute;
-  bottom: 100px;
+  position: relative;
+  bottom: -160px;
   width: calc(3 * var(--card-width));
   height: var(--card-height);
   pointer-events: none;
